@@ -125,3 +125,76 @@ Each board provides 8 solenoid valve connectors, and the current design supports
 This is because the data pin connects to the serial input of shift register.
 On Board 1, the shift register receives data from the Arduino directly.
 For the Board 2-n, their shift registers must have its serial input connected to the serial output of board right beneath it.
+
+## Using the Device
+
+### Installing the Application
+- Electron Version
+    
+- Python Version
+    1. Open the "platforms" folder.
+    2. Open the folder corresponding to your platform.
+    3. Run the setup script.
+
+### Starting the Application
+1. Run the application
+    - Electron version
+        - Run the "Valve Control" app.
+    - Python version
+        - Run the run script in the platforms folder.
+        - OR
+        - Run run.py in the root folder
+2. Select the correct serial device.
+    - A grid of gray numbered buttons should appear
+
+### Manual Mode
+1. Click the numbered buttons to toggle valves on and off.
+
+### Pre-programmed Mode
+1. Select "Built-in Program" at the bottom of the screen.
+2. Click the "Load" button.
+3. Fill in the desired values in popup window.
+4. Enter the number of cycles you wish to run in the "Cycles" field.
+5. Enter the number of ms you want between phases in the "Phase interval" field. (See the Writing a Program section for more information)
+6. Click "Run"
+7. If needed the program can be stopped with the "Stop" button
+
+
+### Self-programmed Mode
+1. Select "..." to the right of the "Program" field.
+2. Navigate to the desired program in the "Open File" dialog.
+3. Enter the number of cycles you wish to run in the "Cycles" field.
+4. Enter the number of ms you want between phases in the "Phase interval" field. (See the Writing a Program section for more information)
+5. Click "Run"
+6. If needed the program can be stopped with the "Stop" button
+
+#### Writing a Program
+1. Create a .txt file.
+2. Create 3 section headers in the file: BEFORE, CYCLE, and AFTER.
+    - The BEFORE section describes the inital state of the valves  (this section is optional).
+    - The CYCLE section is the section that is repeated during operation.
+    - The AFTER section is the final states of the valves (this section is optional).
+3. In each section, specify the desired states of the valves.
+    - There are 2 states: ON and OFF.
+    - One or more valves can be set in a single line  (eg. ON 1) (eg. OFF 1 2 3)
+4. On each line in the section describe a single phase.
+    - Each line should begin with a tab.
+    - Each line/phase is seperated by a timed delay called the "Phase interval".
+5. Between each section leave an empty line.
+6. You should now have a program that looks similar to the program below
+    BEFORE
+        ON 3
+        ON 2
+        ON 1
+
+    CYCLE
+        OFF 1 2
+        ON 1
+        OFF 3
+        ON 2
+        ON 3
+
+    AFTER
+        ON 3
+7. If it follows this format, it should be a funtioning program.
+8. Save the file and run it using the "Self-Programmed Mode" instructions.
