@@ -182,19 +182,21 @@ For the Board 2-n, their shift registers must have its serial input connected to
     - Each line/phase is seperated by a timed delay called the "Phase interval".
 5. Between each section leave an empty line.
 6. You should now have a program that looks similar to the program below
-> BEFORE
->     ON 3
->     ON 2
->     ON 1
->
-> CYCLE
->     OFF 1 2
->     ON 1
->     OFF 3
->     ON 2
->     ON 3
->
-> AFTER
->     ON 3
+```
+    BEFORE
+        ON 3
+        ON 2
+        ON 1
+    
+    CYCLE
+        OFF 1 2
+        ON 1
+        OFF 3
+        ON 2
+        ON 3
+    
+    AFTER
+        ON 3
+```
 7. If it follows this format, it should be a funtioning program.
 8. Save the file and run it using the "Self-Programmed Mode" instructions.
