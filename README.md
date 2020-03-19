@@ -141,11 +141,13 @@ For the Board 2-n, their shift registers must have its serial input connected to
     - Electron version
         - Run the "Valve Control" app.
     - Python version
-        - Run the run script in the platforms folder.
+        - Run the "run" script in the platforms folder.
         - OR
         - Run run.py in the root folder
 2. Select the correct serial device.
-    - A grid of gray numbered buttons should appear
+    - <img src="https://github.com/3D-Printing-for-Microfluidics/valve-control/raw/master/pics/serial_window_inst.png" height="300">
+    - A grid of gray numbered buttons should appear. This indicates the device is ready for use.
+    - <img src="https://github.com/3D-Printing-for-Microfluidics/valve-control/raw/master/pics/main_window_inst.png" height="300">
 
 ### Manual Mode
 1. Click the numbered buttons to toggle valves on and off.
@@ -154,6 +156,7 @@ For the Board 2-n, their shift registers must have its serial input connected to
 1. Select "Built-in Program" at the bottom of the screen.
 2. Click the "Load" button.
 3. Fill in the desired values in popup window.
+    - <img src="https://github.com/3D-Printing-for-Microfluidics/valve-control/raw/master/pics/popup_window_inst.png" height="300">
 4. Enter the number of cycles you wish to run in the "Cycles" field.
 5. Enter the number of ms you want between phases in the "Phase interval" field. (See the Writing a Program section for more information)
 6. Click "Run"
