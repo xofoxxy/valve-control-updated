@@ -107,7 +107,7 @@ After soldering, plug the shift register and optoisolators into their correspond
 
 ### Stacking PCBs
 
-#### For the inpatient
+#### For the impatient
 
 1. Bend or remove the data pins on all boards except Board 1. See the left image below.
 2. Make a connector for serial input and serial output. See the right image below.
