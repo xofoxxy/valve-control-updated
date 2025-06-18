@@ -44,6 +44,7 @@ Details can be found on page 215-221 in [Clippard Full-line Catalog](http://www.
 ## Download
 
 Download [zip](https://github.com/GNHua/valve-control/archive/master.zip) and extract all files.
+go get lunch
 
 ## Prepare Software
 
